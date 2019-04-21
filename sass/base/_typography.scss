@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+}
+
+.link {
+  text-decoration: underline;
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: $cta-light;
+  text-transform: uppercase;
+}
+
+.heading-primary {
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  & > * {
+    display: block;
+  }
+  &--main {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  &--sub {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
+
+.btn {
+    z-index: 1;
+    display: inline-block;
+    padding: 3.2rem;
+    line-height: 1;
+    border-radius: 100%;
+    backface-visibility: hidden;
+    // opacity: 0.5;
+    cursor: pointer;
+    position: relative;
+    transition: all .2s ease-in-out;
+    color: $danger-light;
+    border: 0.1rem solid currentColor;
+    ion-icon {
+      color: inherit;
+      color: currentColor;
+      font-size: 1.6rem;
+      transition: all .2s ease-in;
+    }
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: currentColor;
+      color: $white;
+      opacity: 1;
+      &::before {
+        background-color: currentColor;
+        animation: click-effect .4s ease;
+      }
+    }
+    &:active {
+      transform: translateY(2px);
+    }
+    &:hover ion-icon,
+    &:focus ion-icon {
+      color: $color-black;
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 100%;
+      z-index: -1;
+      opacity: 0;
+      transition: all 1s;
+    }
+  }

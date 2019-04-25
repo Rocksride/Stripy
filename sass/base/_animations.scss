@@ -4,6 +4,7 @@
         transform: translateX(-10rem);
     }
 
+    
     80% {
         transform: translateX(1rem);
     }
@@ -88,6 +89,21 @@
   }
   100% {
     left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes rev-img {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 60%;
+  }
+  100% {
+    left: 70%;
     width: 0%;
   }
 }
